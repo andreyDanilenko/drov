@@ -1,0 +1,23 @@
+.button-more {
+  position: relative;
+  width: 100%;
+  padding: 23px;
+  text-align: start;
+  color: $c-font-5;
+  font-family: "Blogger-Sans";
+  background-color: $c-font-oarange-4;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  border: none;
+  border-radius: 10px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    border: 6px solid transparent;
+    border-left: 13px solid $c-font-5;
+    top: 26px;
+    right: 18px;
+  }
+}
