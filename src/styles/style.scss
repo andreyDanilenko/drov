@@ -1,0 +1,22 @@
+@import "variables/media.scss";
+@import "variables/grid.scss";
+@import "variables/colors.scss";
+@import "variables/typography.scss";
+@import "variables/other.scss";
+@import "variables/gh-pages.scss";
+
+@import "global/fonts.scss";
+@import "global/reset.scss";
+@import "global/base.scss";
+
+@import "mixins/media.scss";
+@import "mixins/grid.scss";
+
+@import "../blocks/button-more/button-more.scss";
+@import "../blocks/header/header.scss";
+@import "../blocks/hero/hero.scss";
+@import "../blocks/burger/burger.scss";
+@import "../blocks/about/about.scss";
+@import "../blocks/route/route.scss";
+@import "../blocks/companion/companion.scss";
+@import "../blocks/person/person.scss";
