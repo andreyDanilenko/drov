@@ -1,0 +1,117 @@
+.header {
+  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+
+  &--open {
+    background-color: $c-bg-main;
+  }
+
+  &__menu-open {
+    display: none;
+  }
+
+  &--open &__menu-open {
+    display: block;
+  }
+
+  &__logo {
+    color: $c-bg-primary;
+    color: $c-bg-main;
+    font-weight: 700;
+    text-align: start;
+    padding: 19px 25px;
+  }
+
+  &__img {
+    background-image: url("#{$img}/logo-mobile.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 15px;
+    width: 96px;
+  }
+
+  &--open &__img {
+    background-image: url("#{$img}/logo-mobile-open.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 100px;
+  }
+
+  &--open &__logo {
+    color: $c-bg-primary;
+    padding: 26px 25px;
+  }
+
+  &__nav-list {
+    text-align: center;
+    padding: 50px 0 25px;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: $c-bg-secondary;
+  }
+
+  &__login {
+    padding: 25px;
+  }
+
+  &__login-button {
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 12px 38px;
+    background-color: $c-font-oarange-1;
+  }
+
+  &__contacts-list {
+    padding: 25px;
+  }
+
+  &__contacts-item {
+    display: flex;
+    text-align: start;
+    margin-top: 15px;
+  }
+
+  &__contacts-text {
+    display: block;
+    margin-top: 11px;
+    margin-left: 16px;
+  }
+
+  &__contacts-link {
+    display: block;
+    text-align: center;
+    background-color: $c-font-2;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+
+    &--phone svg {
+      margin-top: 13px;
+    }
+
+    &--email svg {
+      margin-top: 10px;
+    }
+  }
+
+  &__social-list {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 107px 40px;
+  }
+}
