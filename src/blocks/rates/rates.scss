@@ -1,0 +1,100 @@
+.rates {
+  position: relative;
+  background-color: $c-bg-4;
+  z-index: -120;
+  border-radius: 0 0 35px 35px;
+
+  &__title {
+    padding: 84px 150px 40px 50px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: $c-font-oarange-1;
+  }
+
+  &__button {
+    padding: 0;
+    display: block;
+    position: absolute;
+    background-color: $c-bg-4;
+    border: none;
+    border-radius: 50%;
+    top: 65px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    padding: 21px 49px 11px;
+  }
+
+  &__item {
+    position: relative;
+    padding: 15px 20px 15px 0;
+    box-shadow: -11px 12px 0px -11px $c-font-6;
+
+    &:nth-child(1) {
+      box-shadow: -11px -12px 0px -11px $c-font-6, -11px 12px 0px -11px $c-font-6;
+    }
+  }
+
+  &__item-name {
+    display: block;
+    color: $c-font-3;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &__item-price {
+    display: block;
+    margin-top: 7px;
+    color: $c-font-3;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &__item-number {
+    position: absolute;
+    color: $c-bg-main;
+    width: 34px;
+    height: 34px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    padding-top: 8px;
+    top: 15px;
+    right: -24px;
+    border-radius: 50%;
+  }
+
+  &__item:nth-child(1) &__item-number {
+    background-color: $c-font-oarange-1;
+  }
+
+  &__item:nth-child(2) &__item-number {
+    background-color: $c-font-oarange-2;
+  }
+
+  &__item:nth-child(3) &__item-number {
+    background-color: $c-font-oarange-4;
+  }
+
+  &__show {
+    margin: 31px 0 27px;
+  }
+
+  &__show-button {
+    color: $c-font-7;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
