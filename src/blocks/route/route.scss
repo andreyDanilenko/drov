@@ -1,11 +1,9 @@
 .route {
-  &__wrapper {
-    position: relative;
-    background-color: $c-bg-4;
-    border-radius: 0 0 35px 35px;
-    z-index: -100;
-    margin-bottom: -30px;
-  }
+  position: relative;
+  background-color: $c-bg-4;
+  border-radius: 0 0 35px 35px;
+  z-index: -100;
+  margin-bottom: -30px;
 
   &__text {
     padding: 100px 50px 35px;
