@@ -21,7 +21,7 @@ function html() {
   return src('src/pages/**/*pug')
     .pipe(pug(
       {
-        pretty: true,
+        // pretty: true,
         basedir: 'src'
       }
     ))
@@ -42,7 +42,7 @@ function style() {
 function script() {
   return src('src/**/*.js')
     .pipe(concat('main.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(dest('dist/js'))
     .pipe(browserSync.stream())
 };
