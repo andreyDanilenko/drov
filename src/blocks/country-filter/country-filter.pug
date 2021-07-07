@@ -1,0 +1,29 @@
+-
+  const alphabet = ['а', 'б', 'в', 'г', 'д', 'е', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ч', 'ш', 'э', 'ю', 'я'];
+  const continents = ['Европа', 'Азия', 'Америка', 'Острова'];
+
+mixin countryFilter 
+  section.country-filter 
+    .container 
+      .country-filter__wrapper
+        h2.country-filter__header-title Фильтрация по странам:
+        button.country-filter__header-button 
+        ul.country-filter__list-continent  
+          each continent in continents
+            li.country-filter__item-continent
+              button.country-filter__item-continent-button= continent
+
+        ul.country-filter__list-letter 
+          each letter in alphabet
+            li.products__item
+              a.country-filter__list-letter= letter   
+
+        ul.country-filter__list-name  
+          li.country-filter__item-name  
+            a.country-filter__link-name
+
+
+
+
+
+

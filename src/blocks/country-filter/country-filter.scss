@@ -1,0 +1,9 @@
+.country-filter {
+  background-color: $c-bg-8;
+
+  &__list-letter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+}
