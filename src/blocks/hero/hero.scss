@@ -3,9 +3,11 @@
   background-image: url("#{$img}/globe-back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+  background-color: $c-font-2;
   flex-direction: column;
   background-size: 105% 500px;
   padding-top: 60px;
+  z-index: 600;
 
   &__title {
     padding: 41px 20px 10px;
@@ -67,6 +69,7 @@
   }
 
   &__links-button {
+    cursor: pointer;
     font-family: $f-primary, sans-serif;
     padding: 12px 38px 10px;
     border: none;
