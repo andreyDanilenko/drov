@@ -2,8 +2,9 @@
   position: relative;
   position: absolute;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000;
   text-align: center;
+  transition: 0.5s;
 
   &--open {
     background-color: $c-bg-main;
@@ -18,8 +19,7 @@
   }
 
   &__logo {
-    color: $c-bg-primary;
-    color: $c-bg-main;
+    position: relative;
     font-weight: 700;
     text-align: start;
     padding: 19px 25px;
@@ -64,6 +64,7 @@
   }
 
   &__login-button {
+    cursor: pointer;
     width: 100%;
     border: none;
     border-radius: 25px;
@@ -88,6 +89,10 @@
     display: block;
     margin-top: 11px;
     margin-left: 16px;
+
+    &--email {
+      text-transform: uppercase;
+    }
   }
 
   &__contacts-link {
