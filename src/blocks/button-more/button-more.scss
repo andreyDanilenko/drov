@@ -11,6 +11,11 @@
   line-height: 18px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $c-font-oarange-2;
+  }
 
   &::before {
     position: absolute;
