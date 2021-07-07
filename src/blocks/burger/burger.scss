@@ -1,12 +1,16 @@
 .header {
   &__burger {
+    cursor: pointer;
+    width: 30px;
+    height: 15px;
     position: absolute;
     background: transparent;
     border: none;
     top: 23px;
     right: 26px;
 
-    &::before {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       background-color: $c-bg-main;
@@ -15,7 +19,11 @@
       top: 1px;
       right: 0;
       border-radius: 2px;
-      box-shadow: 0 8px 0 0 $c-bg-main;
+      transition: 0.5s;
+    }
+
+    &::after {
+      top: 9px;
     }
   }
 
@@ -30,14 +38,15 @@
       top: 10px;
       right: 0;
       border-radius: 2px;
+      transition: 0.5s;
     }
 
     &::before {
-      transform: rotate(45deg);
+      transform: rotate(-45deg);
     }
 
     &::after {
-      transform: rotate(-45deg);
+      transform: rotate(45deg);
     }
   }
 }
