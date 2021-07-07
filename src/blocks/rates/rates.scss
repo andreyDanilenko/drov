@@ -1,10 +1,12 @@
 .rates {
   position: relative;
   background-color: $c-bg-4;
-  z-index: -120;
+  z-index: 200;
   border-radius: 0 0 35px 35px;
+  margin-bottom: -30px;
 
   &__title {
+    position: relative;
     padding: 84px 150px 40px 50px;
     font-weight: 700;
     font-size: 24px;
@@ -19,7 +21,7 @@
     background-color: $c-bg-4;
     border: none;
     border-radius: 50%;
-    top: 65px;
+    top: 60px;
     right: 25px;
     width: 100px;
     height: 100px;
