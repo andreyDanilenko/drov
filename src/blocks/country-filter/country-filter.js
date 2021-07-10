@@ -159,11 +159,61 @@ const countries = [
   { country: 'Эстония', continent: 'europe' },
   { country: 'Эфиопия', continent: 'africa' },
   { country: 'ЮАР', continent: 'africa' },
-  { country: 'Южный Судан', continent: 'africa' }
+  { country: 'Южный Судан', continent: 'africa' },
+  { country: 'Ямайка', continent: 'island' },
+  { country: 'Япония', continent: 'asia' }
 ];
-let arr = [];
-countries.forEach(item => {
 
+const itemCountryLetter = document.querySelectorAll('.country-filter__link-letter');
+const listCountryName = document.querySelector('.country-filter__list-name');
+
+const itemContinentButton = document.querySelectorAll('.country-filter__item-continent-button')
+console.log(itemContinentButton);
+
+itemContinentButton.forEach(itBtn => {
+  itBtn.addEventListener('click', function () {
+    console.log(itBtn);
+  });
 });
 
-console.log("а" === "А");
+
+function createItem(obj) {
+  const itemCountryName = document.createElement("li");
+  itemCountryName.classList.add('country-filter__item-name');
+
+  const linkCountryName = document.createElement("a");
+  linkCountryName.innerHTML = obj;
+  linkCountryName.classList.add('country-filter__link-name');
+  linkCountryName.setAttribute('href', '#')
+  itemCountryName.appendChild(linkCountryName);
+
+  listCountryName.appendChild(itemCountryName);
+};
+
+itemCountryLetter.forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const itemCountryName = document.querySelectorAll('.country-filter__item-name');
+    const itemCountryLetter = document.querySelectorAll('.country-filter__link-letter');
+
+    itemCountryLetter.forEach(b => {
+      if (b.classList.contains('country-filter__link-letter--active')) {
+        b.classList.remove('country-filter__link-letter--active')
+      }
+    });
+
+    countries.forEach(item => {
+      if (item.country[0] === btn.textContent.toUpperCase()) {
+        btn.classList.add('country-filter__link-letter--active')
+        createItem(item.country);
+      }
+    });
+
+    if (itemCountryName.length > 0) {
+      itemCountryName.forEach(item => {
+        item.remove();
+      });
+    }
+  });
+});

@@ -1,6 +1,6 @@
 -
   const alphabet = ['а', 'б', 'в', 'г', 'д', 'е', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ч', 'ш', 'э', 'ю', 'я'];
-  const continents = ['Европа', 'Азия', 'Америка', 'Острова'];
+  const continents = ['Европа', 'Азия', 'Америка', 'Острова', 'Африка'];
 
 mixin countryFilter 
   section.country-filter 
@@ -16,11 +16,16 @@ mixin countryFilter
         ul.country-filter__list-letter 
           each letter in alphabet
             li.products__item
-              a.country-filter__list-letter= letter   
+              a(href="#").country-filter__link-letter= letter 
 
-        ul.country-filter__list-name  
-          li.country-filter__item-name  
-            a.country-filter__link-name
+        ul.country-filter__list-name
+
+        .country-filter__button 
+          button.country-filter__button-rolup
+            span
+            span      
+            | Свернуть
+
 
 
 

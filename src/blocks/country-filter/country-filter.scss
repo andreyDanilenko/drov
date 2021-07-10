@@ -1,9 +1,104 @@
 .country-filter {
   background-color: $c-bg-8;
+  margin-top: -20px;
+  border-radius: 0 0 20px 20px;
+  z-index: 200;
 
-  &__list-letter {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  &__header-title {
+    position: relative;
+    padding: 40px 25px 20px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      background-image: url("/img/filter-icon.svg");
+      width: 15px;
+      height: 10px;
+      margin-right: 12px;
+    }
   }
 
+  &__list-continent {
+    padding: 18px 50px 21px;
+  }
+
+  &__item-continent-button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: $c-bg-secondary;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__list-letter {
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 42px 42px 42px 42px 42px;
+  }
+
+  &__link-letter {
+    height: 100%;
+    background-color: $c-bg-main;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $c-font-5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    border: 1px solid $c-border-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--active {
+      color: $c-bg-main;
+      background-color: $c-font-5;
+      border: $c-font-5;
+    }
+  }
+
+  &__list-name {
+    padding: 14px 50px;
+  }
+
+  &__link-name {
+    text-decoration: none;
+    color: $c-font-3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__button {
+    padding: 14px 25px 28px;
+  }
+
+  &__button-rolup {
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color: $c-bg-secondary;
+    background-color: $c-bg-9;
+    display: block;
+  }
 }
