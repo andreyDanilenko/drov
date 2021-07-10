@@ -1,3 +1,43 @@
+//Список континентов
+const continents = [
+  { continets: 'Европа', type: 'europe' },
+  { continets: 'Азия', type: 'asia' },
+  { continets: 'Америка', type: 'america' },
+  { continets: 'Осторова', type: 'islands' },
+  { continets: 'Африка', type: 'africa' },
+];
+
+const listCountryContinents = document.querySelector('.country-filter__list-continent');
+
+continents.forEach(item => {
+  const itemCountryContinents = document.createElement("li");
+  itemCountryContinents.classList.add('country-filter__item-continent');
+
+  const buttonCountryContinents = document.createElement("button");
+  buttonCountryContinents.innerHTML = item.continets;
+  buttonCountryContinents.classList.add('country-filter__item-continent-button');
+  itemCountryContinents.appendChild(buttonCountryContinents);
+
+  listCountryContinents.appendChild(itemCountryContinents);
+});
+//Список букв
+const alphabet = ['а', 'б', 'в', 'г', 'д', 'е', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ч', 'ш', 'э', 'ю', 'я'];
+
+const listCountryLetter = document.querySelector('.country-filter__list-letter');
+
+alphabet.forEach(item => {
+  const itemCountryLetter = document.createElement("li");
+  itemCountryLetter.classList.add('country-filter__item-letter');
+
+  const linkCountryLetter = document.createElement("a");
+  linkCountryLetter.innerHTML = item;
+  linkCountryLetter.classList.add('country-filter__link-letter');
+  linkCountryLetter.setAttribute('href', '#');
+  itemCountryLetter.appendChild(linkCountryLetter);
+
+  listCountryLetter.appendChild(itemCountryLetter);
+});
+
 const countries = [
   { country: 'Австралия', continent: 'europe' },
   { country: 'Австрия', continent: 'asia' },
@@ -164,20 +204,11 @@ const countries = [
   { country: 'Япония', continent: 'asia' }
 ];
 
-const itemCountryLetter = document.querySelectorAll('.country-filter__link-letter');
+const linkCountryLetter = document.querySelectorAll('.country-filter__link-letter');
 const listCountryName = document.querySelector('.country-filter__list-name');
+const itemContinentButton = document.querySelectorAll('.country-filter__item-continent-button');
 
-const itemContinentButton = document.querySelectorAll('.country-filter__item-continent-button')
-console.log(itemContinentButton);
-
-itemContinentButton.forEach(itBtn => {
-  itBtn.addEventListener('click', function () {
-    console.log(itBtn);
-  });
-});
-
-
-function createItem(obj) {
+function createCountryItem(obj) {
   const itemCountryName = document.createElement("li");
   itemCountryName.classList.add('country-filter__item-name');
 
@@ -190,7 +221,7 @@ function createItem(obj) {
   listCountryName.appendChild(itemCountryName);
 };
 
-itemCountryLetter.forEach(btn => {
+linkCountryLetter.forEach(btn => {
   btn.addEventListener('click', function (e) {
     e.preventDefault()
 
@@ -206,7 +237,7 @@ itemCountryLetter.forEach(btn => {
     countries.forEach(item => {
       if (item.country[0] === btn.textContent.toUpperCase()) {
         btn.classList.add('country-filter__link-letter--active')
-        createItem(item.country);
+        createCountryItem(item.country);
       }
     });
 
